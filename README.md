@@ -145,7 +145,12 @@ const router = createBrowserRouter([
       { index: true, loader: landingLoader, element: <Landing /> },
       { path: "about", element: <About /> },
       { path: "newsletter", element: <Newsletter /> },
-      { path: "cocktail/:id", loader: singleCocktailLoader, element: <Cocktail />, errorElement: <SinglePageError /> },
+      {
+        path: "cocktail/:id",
+        loader: singleCocktailLoader,
+        element: <Cocktail />,
+        errorElement: <SinglePageError />,
+      },
       // ...other routes
     ],
   },

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Keep scrollbar thin, transparent track, themed thumb */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 185, 129, 0.75) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 185, 129, 0.9),
+    rgba(6, 182, 212, 0.85)
+  );
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(52, 211, 153, 0.95),
+    rgba(34, 211, 238, 0.9)
+  );
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(16, 185, 129, 0.2), transparent 50%),
+    radial-gradient(circle at bottom, rgba(59, 130, 246, 0.2), transparent 55%),
+    #030712;
+  color: #f8fafc;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top, rgba(16, 185, 129, 0.12), transparent 42%),
+    radial-gradient(circle at bottom, rgba(99, 102, 241, 0.1), transparent 50%);
+}
+
+.app-shell::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.06), transparent 62%);
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(16px);
+}
+
+/* CTA shine animation per project guideline */
+.cta-shine-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cta-shine-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 85%;
+  transform: translateX(-100%) skewX(-8deg);
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  animation: cta-shine 4.5s cubic-bezier(0.35, 0, 0.15, 1) infinite;
+  pointer-events: none;
+}
+
+.cta-shine-button {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 650ms ease-out forwards;
+}
