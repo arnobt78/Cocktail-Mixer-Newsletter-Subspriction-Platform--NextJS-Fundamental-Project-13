@@ -1,3 +1,4 @@
+/** Logo + wordmark linking home—shared by Navbar and admin header. */
 import Link from "next/link";
 import { Martini } from "lucide-react";
 import { cn } from "@/lib/utils";

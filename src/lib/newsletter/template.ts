@@ -1,3 +1,4 @@
+/** HTML string builders for Resend emails (confirm, welcome, broadcast, digest). */
 interface WelcomeEmailTemplateInput {
   fullName: string;
   unsubscribeUrl: string;

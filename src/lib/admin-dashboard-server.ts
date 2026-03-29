@@ -1,3 +1,7 @@
+/**
+ * Heavier admin gate: session + Redis-backed control-room summary (counts, readiness flags).
+ * Cached per RSC request like getAdminShellGate.
+ */
 import { cache } from "react";
 import { cookies } from "next/headers";
 import {

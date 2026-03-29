@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * next/image with fallback to native <img> after onError—useful when CDN URLs 404 or domains change.
+ */
 import Image, { type ImageProps } from "next/image";
 import { useCallback, useState, type SyntheticEvent } from "react";
 import { cn } from "@/lib/utils";

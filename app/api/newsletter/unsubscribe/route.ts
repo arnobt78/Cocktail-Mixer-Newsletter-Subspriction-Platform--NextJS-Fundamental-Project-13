@@ -1,3 +1,4 @@
+/** One-click unsubscribe: validates token, records reason/feedback optional, sets unsubscribedAt. */
 import { NextResponse } from "next/server";
 import { applyRateLimit } from "@/lib/newsletter/rate-limit";
 import { unsubscribeFromNewsletter } from "@/lib/newsletter/service";

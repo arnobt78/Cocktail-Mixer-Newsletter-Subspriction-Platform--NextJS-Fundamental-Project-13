@@ -1,3 +1,4 @@
+/** Subscriber admin table (async segment loads Redis lists when authenticated). */
 import { Suspense } from "react";
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";

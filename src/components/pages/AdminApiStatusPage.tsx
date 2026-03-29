@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Ops-style dashboard: GET /diagnostics for server probes + integration flags; browser fetch loop for listed routes.
+ */
 import { useCallback, useEffect, useState } from "react";
 import { RefreshCw } from "lucide-react";
 import { Card } from "@/components/ui/card";

@@ -1,5 +1,6 @@
 "use client";
 
+/** Renders PROJECT_API_DOC_GROUPS in Radix tabs—keep registry in sync when APIs change. */
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

@@ -1,3 +1,4 @@
+/** Central copy for About page and similar marketing surfaces—keeps prose out of JSX. */
 export const aboutText =
   'MixMaster is a learning-focused cocktail platform built with modern Next.js and TypeScript. It combines SSR data loading, rich client interactions, reusable UI components, and a production-style newsletter pipeline. Learners can explore real API integrations, safe image rendering, state synchronization, optimistic UI patterns, and admin-driven communication workflows in one cohesive project.';
 

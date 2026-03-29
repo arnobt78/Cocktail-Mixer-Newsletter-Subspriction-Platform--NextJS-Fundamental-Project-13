@@ -1,3 +1,4 @@
+/** Site-wide footer rendered from AppShell on public routes only. */
 import { Copyright } from "lucide-react";
 
 export function Footer() {

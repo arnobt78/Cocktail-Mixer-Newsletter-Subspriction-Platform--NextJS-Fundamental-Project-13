@@ -1,3 +1,4 @@
+/** Broadcast composer entry: same shell gate; client bundle loads drafts/queue from summary API. */
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";
 import { ControlRoomComposerClient } from "@/components/admin/ControlRoomComposerClient";

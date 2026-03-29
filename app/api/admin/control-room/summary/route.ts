@@ -1,3 +1,4 @@
+/** JSON snapshot of dashboard counts + integration readiness for TanStack Query in admin UI. */
 import { NextResponse } from "next/server";
 import { assertAdminSession } from "@/lib/admin-api-auth";
 import { getControlRoomSummary } from "@/lib/newsletter/control-room";

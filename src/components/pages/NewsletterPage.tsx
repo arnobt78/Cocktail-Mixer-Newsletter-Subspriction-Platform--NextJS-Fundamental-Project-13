@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Marketing + signup form: useNewsletterSubscribe POSTs to /api/newsletter; context stores last email for confirm UX.
+ */
 import { motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import {

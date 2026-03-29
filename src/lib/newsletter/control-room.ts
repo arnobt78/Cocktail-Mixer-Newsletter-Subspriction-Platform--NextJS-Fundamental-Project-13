@@ -1,3 +1,6 @@
+/**
+ * Aggregates Redis-backed lists into one ControlRoomSummary for the overview API + SSR segments.
+ */
 import {
   countDeadLetterEntries,
   getActiveSubscriberCount,

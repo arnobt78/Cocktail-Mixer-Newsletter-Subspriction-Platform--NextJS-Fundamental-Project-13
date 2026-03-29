@@ -1,3 +1,4 @@
+/** Locale-aware display for ISO timestamps in admin tables. */
 export function formatAdminDateTime(iso: string | undefined): string {
   if (!iso?.trim()) {
     return "—";

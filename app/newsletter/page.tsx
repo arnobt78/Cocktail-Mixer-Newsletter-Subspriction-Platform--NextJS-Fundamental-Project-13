@@ -1,3 +1,4 @@
+/** Public newsletter signup marketing + form. */
 import { NewsletterPage } from "@/components/pages/NewsletterPage";
 
 export default function Newsletter() {

@@ -1,3 +1,4 @@
+/** Minimal smoke: public routes render an h1 (no auth, no external services required). */
 import { expect, test } from "@playwright/test";
 
 test("home loads", async ({ page }) => {

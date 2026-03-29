@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * HomePage (client): search form updates the URL (?search=); TanStack Query refetches when the term changes.
+ * SSR passes initialDrinks/initialSearchTerm so first paint matches the server. Favorites use localStorage +
+ * useSyncExternalStore hydration guard to avoid SSR/client HTML mismatches.
+ */
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -61,6 +66,7 @@ export function HomePage({ initialDrinks, initialSearchTerm }: HomePageProps) {
   const [sortMode, setSortMode] = useState<SortMode>("a-z");
   const [viewMode, setViewMode] = useState<ViewMode>("cozy");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  // false on server, true after mount—so we do not render favorite-dependent UI from stale server HTML.
   const isHydrated = useSyncExternalStore(
     () => () => {},
     () => true,

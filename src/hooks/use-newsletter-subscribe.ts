@@ -1,5 +1,6 @@
 "use client";
 
+/** Encapsulates POST /api/newsletter + loading state + context email for downstream pages. */
 import { useState } from "react";
 import { useNewsletterContext } from "@/context/newsletter-context";
 import type {

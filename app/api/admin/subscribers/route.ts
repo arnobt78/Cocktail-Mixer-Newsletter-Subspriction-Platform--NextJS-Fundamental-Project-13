@@ -1,3 +1,4 @@
+/** Admin subscriber directory: GET combined lists, PATCH names, DELETE records. */
 import { NextResponse } from "next/server";
 import { assertAdminSession } from "@/lib/admin-api-auth";
 import {

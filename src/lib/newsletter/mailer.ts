@@ -1,3 +1,4 @@
+/** Resend wrapper: confirmation, welcome, broadcast HTML from templates; dead-letter on failure. */
 import { Resend } from "resend";
 import { randomInt } from "node:crypto";
 import {

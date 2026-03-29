@@ -1,3 +1,4 @@
+// Vitest: Node env, @ alias maps to src/, tests in tests/**/*.test.ts
 import { defineConfig } from "vitest/config";
 import path from "node:path";
 

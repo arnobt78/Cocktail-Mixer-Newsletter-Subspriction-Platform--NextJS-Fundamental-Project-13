@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Six-digit passkey UI: posts to /api/admin/session/login; on success the httpOnly cookie unlocks admin routes.
+ */
 import {
   useEffect,
   useRef,

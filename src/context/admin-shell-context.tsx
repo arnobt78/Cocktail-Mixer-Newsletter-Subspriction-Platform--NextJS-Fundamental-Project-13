@@ -1,5 +1,6 @@
 "use client";
 
+/** Persists sidebar collapsed state in localStorage; provides toggle for AdminControlRoomLayout + AdminSidebar. */
 import {
   createContext,
   useCallback,

@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Admin broadcast workspace: local form state + TanStack mutations calling control-room APIs.
+ * Manages drafts, queue, history, test send, schedule, resend, and optional AI assist dialog.
+ */
 import {
   useEffect,
   useRef,

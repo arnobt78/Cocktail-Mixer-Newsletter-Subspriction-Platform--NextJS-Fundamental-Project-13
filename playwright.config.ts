@@ -1,3 +1,4 @@
+/** Smoke E2E against local dev server; reuseExistingServer for quick local runs. */
 import { defineConfig, devices } from "@playwright/test";
 
 const isCi = Boolean(process.env.GITHUB_ACTIONS);

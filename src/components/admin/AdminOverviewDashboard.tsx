@@ -1,5 +1,6 @@
 "use client";
 
+/** KPI cards + checklist driven by ControlRoomSummary (from SSR initialData + polling via useAdminSummaryQuery). */
 import { useMemo } from "react";
 import {
   Users,

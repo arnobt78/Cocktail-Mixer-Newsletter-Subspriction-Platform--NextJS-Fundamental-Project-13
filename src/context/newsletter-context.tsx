@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Lightweight cross-page state after signup (e.g. confirm page can read last email). Prefer URL params for truth;
+ * this is UX sugar only.
+ */
 import {
   createContext,
   useContext,

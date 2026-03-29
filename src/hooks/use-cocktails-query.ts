@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Bridges TheCocktailDB fetches to TanStack Query. initialData hydrates from the server so the first client render matches SSR.
+ */
 import { useQuery } from "@tanstack/react-query";
 import { fetchCocktails, fetchSingleCocktail } from "@/lib/api";
 import type { CocktailCardItem, CocktailDetail } from "@/types/cocktail";

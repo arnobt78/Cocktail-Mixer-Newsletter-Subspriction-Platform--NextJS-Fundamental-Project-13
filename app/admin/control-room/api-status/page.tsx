@@ -1,3 +1,4 @@
+/** Live probe dashboard (client component inside Suspense). */
 import { Suspense } from "react";
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";

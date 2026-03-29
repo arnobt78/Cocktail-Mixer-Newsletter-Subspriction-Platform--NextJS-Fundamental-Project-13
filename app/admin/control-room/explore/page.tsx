@@ -1,3 +1,4 @@
+/** Quick links from admin to public-facing routes for manual QA. */
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";

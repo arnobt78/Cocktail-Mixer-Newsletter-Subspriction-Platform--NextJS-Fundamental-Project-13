@@ -1,3 +1,4 @@
+/** Shapes returned by TheCocktailDB JSON API + UI-friendly card/detail types. */
 export interface DrinkApiItem {
   idDrink: string;
   strDrink: string;

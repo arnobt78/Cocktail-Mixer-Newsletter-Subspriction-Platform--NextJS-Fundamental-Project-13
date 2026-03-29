@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Creates one QueryClient per browser session (useState lazy init avoids sharing state across requests).
+ * Default staleTime reduces refetch churn; Devtools help debug cache during development.
+ */
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState, type ReactNode } from "react";

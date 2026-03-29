@@ -1,3 +1,4 @@
+/** Clears admin cookie and redirects home (303). */
 import { NextResponse } from "next/server";
 import { getAdminSessionCookieName } from "@/lib/admin-session";
 

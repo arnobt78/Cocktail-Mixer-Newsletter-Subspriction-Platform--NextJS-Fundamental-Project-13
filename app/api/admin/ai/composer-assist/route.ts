@@ -1,3 +1,4 @@
+/** Admin-only AI draft helper: rate-limited; tries Groq → Gemini → OpenRouter in lib. */
 import { NextResponse } from "next/server";
 import { assertAdminSession } from "@/lib/admin-api-auth";
 import { generateComposerDraftWithFallback } from "@/lib/admin/ai-composer-fill";

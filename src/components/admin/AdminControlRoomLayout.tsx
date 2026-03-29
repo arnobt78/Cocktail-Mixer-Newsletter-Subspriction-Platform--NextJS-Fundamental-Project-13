@@ -1,5 +1,6 @@
 "use client";
 
+/** Authenticated admin chrome: collapsible sidebar, mobile drawer, export + logout actions. */
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import Link from "next/link";

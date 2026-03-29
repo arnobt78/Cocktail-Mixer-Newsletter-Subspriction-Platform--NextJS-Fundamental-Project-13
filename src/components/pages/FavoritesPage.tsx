@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Lists favorited drink IDs from localStorage, then fetches each drink from TheCocktailDB for cards (client-only data).
+ */
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";

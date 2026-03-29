@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Public site navigation + mobile drawer. Favorite count subscribes to localStorage via useSyncExternalStore (SSR-safe).
+ */
 import Link from "next/link";
 import { Menu, Sparkles, X } from "lucide-react";
 import { BrandMark } from "@/components/layout/brand-mark";

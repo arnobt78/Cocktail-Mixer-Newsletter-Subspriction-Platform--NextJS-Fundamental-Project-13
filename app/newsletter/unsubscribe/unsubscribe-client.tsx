@@ -1,5 +1,6 @@
 "use client";
 
+/** Token-gated unsubscribe form: POST /api/newsletter/unsubscribe with optional reason/feedback. */
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState, type FormEvent } from "react";

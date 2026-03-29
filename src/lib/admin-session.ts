@@ -1,3 +1,7 @@
+/**
+ * Admin session cookie: HMAC-signed payload so the client cannot forge a session without ADMIN_SESSION_SECRET (or passkey fallback).
+ * verifyAdminPasskey compares raw input to ADMIN_DASHBOARD_KEY (your “door code”).
+ */
 import { createHmac, timingSafeEqual } from "node:crypto";
 
 const COOKIE_NAME = "mixmaster_admin_session";

@@ -1,3 +1,4 @@
+/** Worker-style POST: sends due queue items whose schedule ≤ now. */
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { dispatchBroadcast } from "@/lib/newsletter/broadcast-dispatch";

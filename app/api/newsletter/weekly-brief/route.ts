@@ -1,3 +1,4 @@
+/** Cron-only digest: requires x-cron-secret; not for browsers. Sends batch email to active list. */
 import { NextResponse } from "next/server";
 import { listActiveSubscribers } from "@/lib/newsletter/repository";
 import { createUnsubscribeToken } from "@/lib/newsletter/security";

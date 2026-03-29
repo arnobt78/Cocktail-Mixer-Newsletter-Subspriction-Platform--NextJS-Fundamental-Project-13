@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 
+/** Security headers on all routes; image remotePatterns whitelist TheCocktailDB; allowedDevOrigins fixes Playwright/127.0.0.1 HMR. */
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },

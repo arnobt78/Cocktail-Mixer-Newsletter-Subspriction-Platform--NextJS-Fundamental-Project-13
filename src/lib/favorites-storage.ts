@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Favorites persist in localStorage. CustomEvent syncs tabs/components; storage event syncs other windows.
+ */
 const FAVORITES_KEY = "mixmaster:favorites";
 const FAVORITES_EVENT = "mixmaster:favorites-changed";
 

@@ -1,3 +1,4 @@
+/** Health JSON: TheCocktailDB ping, env integration flags, server-origin HTTP probes for ops UI. */
 import { NextResponse } from "next/server";
 import { assertAdminSession } from "@/lib/admin-api-auth";
 import { SERVER_DIAGNOSTICS_PROBE_ROUTES } from "@/data/project-api-registry";

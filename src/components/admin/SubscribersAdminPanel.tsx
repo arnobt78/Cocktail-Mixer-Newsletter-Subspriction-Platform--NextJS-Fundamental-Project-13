@@ -1,5 +1,6 @@
 "use client";
 
+/** Admin table for pending + confirmed subscribers: TanStack Query + mutations to /api/admin/subscribers. */
 import { useCallback, useMemo, useState, type ReactNode } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { CheckCircle2, Pencil, Trash2, X, XCircle } from "lucide-react";

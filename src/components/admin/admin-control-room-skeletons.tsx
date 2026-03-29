@@ -1,3 +1,4 @@
+/** Loading placeholders for Suspense boundaries in admin routes (match real layout density). */
 import type { ComponentType } from "react";
 import {
   CalendarClock,

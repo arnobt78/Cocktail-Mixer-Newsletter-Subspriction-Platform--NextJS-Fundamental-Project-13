@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * SSR-safe matchMedia hook: server snapshot always false; client subscribes to resize/breakpoint changes.
+ */
 import { useCallback, useSyncExternalStore } from "react";
 
 export function useMediaQuery(query: string): boolean {

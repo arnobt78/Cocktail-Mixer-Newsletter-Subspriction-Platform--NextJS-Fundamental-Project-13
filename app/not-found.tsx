@@ -1,3 +1,6 @@
+/**
+ * Global 404 UI when notFound() is thrown or no route matches.
+ */
 import Link from "next/link";
 import { SafeImage } from "@/components/ui/safe-image";
 

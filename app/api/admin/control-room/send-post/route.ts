@@ -1,3 +1,4 @@
+/** Send now, test to one inbox, or enqueue for scheduled delivery; uses mailer + dispatch helpers. */
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {

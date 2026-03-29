@@ -1,6 +1,7 @@
 import type { AiComposerFillPayload, AiComposerFillResponse, AiComposerProviderId } from "@/types/admin";
 import type { BroadcastAudience } from "@/types/newsletter";
 
+/** Server-only LLM calls with ordered fallback; parses JSON-shaped reply into broadcast fields. */
 const SYSTEM = `You help admins draft MixMaster newsletter posts about cocktails, recipes, and bar culture.
 Return ONLY a single JSON object (no markdown fences) with keys:
 subject (string), preheader (string), body (string, use \\n for line breaks),

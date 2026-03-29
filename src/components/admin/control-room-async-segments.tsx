@@ -1,3 +1,6 @@
+/**
+ * RSC segments for control-room pages: branch on env missing → unauthenticated → passkey dialog → data views.
+ */
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";
 import { AdminOverviewDashboard } from "@/components/admin/AdminOverviewDashboard";

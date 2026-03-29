@@ -1,3 +1,6 @@
+/**
+ * Unit tests for app/api/newsletter/* route handlers with service + rate-limit mocked.
+ */
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const mockApplyRateLimit = vi.fn();

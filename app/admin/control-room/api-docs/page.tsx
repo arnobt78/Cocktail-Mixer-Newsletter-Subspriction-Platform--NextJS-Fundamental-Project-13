@@ -1,3 +1,4 @@
+/** In-app HTTP reference (from PROJECT_API_DOC_GROUPS). */
 import { Suspense } from "react";
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";

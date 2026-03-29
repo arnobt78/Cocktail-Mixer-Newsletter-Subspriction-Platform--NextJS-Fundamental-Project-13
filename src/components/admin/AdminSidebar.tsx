@@ -1,5 +1,6 @@
 "use client";
 
+/** Collapsible nav rail for control-room sections; highlights active path and supports mobile tooltips. */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type ComponentType } from "react";

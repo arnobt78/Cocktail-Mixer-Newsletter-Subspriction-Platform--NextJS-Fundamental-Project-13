@@ -1,3 +1,4 @@
+/** Shared DTOs for newsletter HTTP API, Redis records, and broadcast composer. */
 export interface NewsletterSubscribeRequest {
   firstName: string;
   lastName: string;

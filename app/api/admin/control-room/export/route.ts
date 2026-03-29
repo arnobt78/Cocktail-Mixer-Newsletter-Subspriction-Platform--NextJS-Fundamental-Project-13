@@ -1,3 +1,4 @@
+/** CSV download of active + pending subscribers for offline analysis. */
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import {

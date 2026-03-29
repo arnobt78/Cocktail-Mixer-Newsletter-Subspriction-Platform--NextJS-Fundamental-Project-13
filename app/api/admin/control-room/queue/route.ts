@@ -1,3 +1,4 @@
+/** Scheduled broadcast queue: GET list, PATCH item, DELETE one or all (cookie auth via ensureAuth). */
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {

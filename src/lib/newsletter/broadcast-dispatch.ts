@@ -1,3 +1,4 @@
+/** Fan-out broadcast to audience segments; per-recipient unsubscribe URLs signed with shared secret. */
 import { sendBroadcastEmail } from "@/lib/newsletter/mailer";
 import { createUnsubscribeToken } from "@/lib/newsletter/security";
 import {

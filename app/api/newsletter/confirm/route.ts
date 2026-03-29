@@ -1,3 +1,4 @@
+/** Double opt-in completion: verifies signed token, promotes pending → active subscriber, sends welcome. */
 import { NextResponse } from "next/server";
 import { applyRateLimit } from "@/lib/newsletter/rate-limit";
 import { confirmNewsletterSubscription } from "@/lib/newsletter/service";

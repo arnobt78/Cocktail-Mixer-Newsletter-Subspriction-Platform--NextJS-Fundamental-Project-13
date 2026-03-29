@@ -1,5 +1,6 @@
 "use client";
 
+/** Static educational copy from src/data/content.ts (feature list + tips). */
 import {
   BookOpenText,
   FlaskConical,

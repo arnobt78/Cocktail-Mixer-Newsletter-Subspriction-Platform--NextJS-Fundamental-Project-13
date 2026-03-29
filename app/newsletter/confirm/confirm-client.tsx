@@ -1,5 +1,6 @@
 "use client";
 
+/** Reads email+token from query string, POSTs to /api/newsletter/confirm on mount, shows result state. */
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";

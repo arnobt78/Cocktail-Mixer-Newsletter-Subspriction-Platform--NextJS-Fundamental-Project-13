@@ -1,3 +1,6 @@
+/**
+ * Per-IP sliding-window style counter in Redis (INCR + EXPIRE). Used by public newsletter POST routes.
+ */
 import { Redis } from "@upstash/redis";
 
 function getRedisClient(): Redis {

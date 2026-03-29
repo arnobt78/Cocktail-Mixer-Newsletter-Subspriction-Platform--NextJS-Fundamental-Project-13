@@ -1,3 +1,4 @@
+/** Composer drafts: PATCH fields or DELETE one / all. */
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {

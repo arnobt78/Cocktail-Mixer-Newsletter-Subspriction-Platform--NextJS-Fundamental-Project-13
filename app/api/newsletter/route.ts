@@ -1,3 +1,6 @@
+/**
+ * Public subscribe endpoint: rate limit → validate body → queue pending subscriber + send confirmation email (when configured).
+ */
 import { NextResponse } from "next/server";
 import {
   subscribeToNewsletter,

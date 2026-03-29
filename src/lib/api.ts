@@ -1,3 +1,7 @@
+/**
+ * TheCocktailDB HTTP helpers used from Server Components and from TanStack Query on the client.
+ * Maps the API’s flat strIngredient* fields into a clean ingredients[] array for the UI.
+ */
 import type {
   CocktailCardItem,
   CocktailDetail,
@@ -52,6 +56,7 @@ function toDetail(item: DrinkApiItem): CocktailDetail {
 
 export async function fetchCocktails(searchTerm: string): Promise<CocktailCardItem[]> {
   const term = searchTerm.trim() || "a";
+  // revalidate: ISR-style cache on the server; client fetch from useQuery ignores Next cache hints.
   const response = await fetch(`${cocktailSearchUrl}${encodeURIComponent(term)}`, {
     next: { revalidate: 120 },
   });

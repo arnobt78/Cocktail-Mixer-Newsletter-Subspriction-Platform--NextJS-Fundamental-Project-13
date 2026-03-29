@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Cocktail detail (client): hydrates from server initialCocktail; useSingleCocktailQuery can refetch if needed.
+ * Favorite toggle writes through favorites-storage (localStorage).
+ */
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {

@@ -1,5 +1,8 @@
 "use client";
 
+/**
+ * Global chrome: public pages get Navbar + Footer; /admin/* uses its own layout/sidebar, so we hide them here.
+ */
 import type { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";

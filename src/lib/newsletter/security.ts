@@ -1,3 +1,6 @@
+/**
+ * HMAC tokens for confirm/unsubscribe links. timingSafeEqual prevents token comparison timing leaks.
+ */
 import { createHmac, timingSafeEqual } from "node:crypto";
 
 function getSecret(): string {

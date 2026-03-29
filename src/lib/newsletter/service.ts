@@ -1,3 +1,7 @@
+/**
+ * Newsletter domain logic: validation, subscribe → pending + confirmation link, confirm → active + welcome,
+ * unsubscribe with signed tokens. Repository + mailer abstract Redis/Resend.
+ */
 import {
   deletePendingSubscriber,
   getPendingSubscriberByEmail,

@@ -1,3 +1,6 @@
+/**
+ * Route-handler guard: reads the admin session cookie and verifies HMAC. Use at the top of admin API routes.
+ */
 import { cookies } from "next/headers";
 import {
   getAdminSessionCookieName,

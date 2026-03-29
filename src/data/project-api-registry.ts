@@ -1,3 +1,7 @@
+/**
+ * Single source for in-app API documentation (Admin → API Documentation) and probe route lists (API status).
+ * When you add a route handler, update the matching group here so docs stay honest.
+ */
 export type ApiDocEndpoint = {
   path: string;
   methods: readonly string[];

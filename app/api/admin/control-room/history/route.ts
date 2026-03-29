@@ -1,3 +1,4 @@
+/** Resend history rows: DELETE by id or clear all. */
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {

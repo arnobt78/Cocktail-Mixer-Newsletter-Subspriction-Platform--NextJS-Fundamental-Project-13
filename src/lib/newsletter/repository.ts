@@ -1,3 +1,6 @@
+/**
+ * Persistence layer: Upstash Redis keys for subscribers, pending confirms, broadcast drafts/queue/history, dead-letter.
+ */
 import { Redis } from "@upstash/redis";
 import type {
   BroadcastDraft,

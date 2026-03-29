@@ -1,3 +1,6 @@
+/**
+ * Control room home: fast shell gate → passkey vs Suspense-wrapped overview (Redis summary inside).
+ */
 import { Suspense } from "react";
 import { Card } from "@/components/ui/card";
 import { AdminAccessDialog } from "@/components/admin/AdminAccessDialog";

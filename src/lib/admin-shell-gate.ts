@@ -13,6 +13,7 @@ export type AdminShellGate =
 /**
  * Fast gate for admin layout: env + session cookie only (no Redis / summary).
  * Use this so sidebar + top bar render without waiting on control-room data.
+ * React cache() dedupes repeated calls in the same RSC request (layout + page segments).
  */
 export const getAdminShellGate = cache(async function getAdminShellGate(): Promise<AdminShellGate> {
   if (!process.env.ADMIN_DASHBOARD_KEY) {

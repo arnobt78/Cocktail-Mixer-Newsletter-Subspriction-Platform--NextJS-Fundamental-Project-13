@@ -1,3 +1,6 @@
+/**
+ * Admin login: compares 6-digit passkey to ADMIN_DASHBOARD_KEY, then sets signed httpOnly session cookie.
+ */
 import { NextResponse } from "next/server";
 import {
   createAdminSessionValue,

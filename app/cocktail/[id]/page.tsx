@@ -1,3 +1,6 @@
+/**
+ * Dynamic cocktail detail: loads one drink by idDrink on the server; 404 if TheCocktailDB returns nothing.
+ */
 import { notFound } from "next/navigation";
 import { CocktailPage } from "@/components/pages/CocktailPage";
 import { fetchSingleCocktail } from "@/lib/api";

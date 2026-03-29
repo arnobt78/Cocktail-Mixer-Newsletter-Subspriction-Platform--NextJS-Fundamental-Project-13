@@ -1,5 +1,6 @@
 "use client";
 
+/** Shared query key + fetcher so overview and other panels can invalidate the same admin summary cache. */
 import { useQuery } from "@tanstack/react-query";
 import type { ControlRoomSummary } from "@/lib/newsletter/control-room";
 

@@ -1,5 +1,6 @@
 "use client";
 
+/** Styled Sonner custom toast for “activity” feedback (search applied, copied, etc.). */
 import type { ReactNode } from "react";
 import { toast } from "sonner";
 
