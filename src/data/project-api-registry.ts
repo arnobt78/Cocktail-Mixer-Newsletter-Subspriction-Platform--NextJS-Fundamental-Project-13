@@ -154,7 +154,8 @@ export const PROJECT_API_DOC_GROUPS: readonly ApiDocGroup[] = [
         methods: ["GET"],
         summary: "Server-side latency check to TheCocktailDB + timestamp (this project).",
         auth: "admin-session",
-        response: "JSON `{ ok, generatedAt, cocktailDb: { ok, ms, status } }`.",
+        response:
+          "JSON `{ ok, generatedAt, cocktailDb, runtime: { nodeEnv, cocktailDbHost, integrations }, serverProbes[] }`.",
       },
     ],
   },
@@ -204,15 +205,42 @@ export const PROJECT_API_DOC_GROUPS: readonly ApiDocGroup[] = [
   },
 ] as const;
 
-export type ProbeableRoute = {
+export type BrowserProbeRoute = {
   path: string;
-  method: "GET";
+  method: "GET" | "HEAD";
   label: string;
 };
 
-/** Routes probed from the browser with `credentials: include` (admin session). */
-export const ADMIN_GET_PROBE_ROUTES: readonly ProbeableRoute[] = [
+/** Routes probed from the browser (admin routes use `credentials: include`). */
+export const BROWSER_PROBE_ROUTES: readonly BrowserProbeRoute[] = [
   { path: "/api/admin/control-room/summary", method: "GET", label: "Control room summary" },
   { path: "/api/admin/subscribers", method: "GET", label: "Subscribers" },
   { path: "/api/admin/control-room/queue", method: "GET", label: "Broadcast queue" },
+  { path: "/robots.txt", method: "GET", label: "Robots.txt" },
+  { path: "/", method: "HEAD", label: "Home page" },
+  { path: "/about", method: "HEAD", label: "About page" },
+  { path: "/favorites", method: "HEAD", label: "Favorites page" },
+  { path: "/newsletter", method: "HEAD", label: "Newsletter signup page" },
 ] as const;
+
+export type ServerDiagnosticsProbeRoute = {
+  path: string;
+  method: "GET" | "HEAD";
+  label: string;
+};
+
+/** Probed from the diagnostics route handler (no cookies; 401/405 still mean the route exists). */
+export const SERVER_DIAGNOSTICS_PROBE_ROUTES: readonly ServerDiagnosticsProbeRoute[] = [
+  { path: "/robots.txt", method: "GET", label: "Robots.txt" },
+  { path: "/", method: "HEAD", label: "Home" },
+  { path: "/about", method: "HEAD", label: "About" },
+  { path: "/favorites", method: "HEAD", label: "Favorites" },
+  { path: "/newsletter", method: "HEAD", label: "Newsletter page" },
+  { path: "/api/newsletter", method: "GET", label: "Newsletter subscribe API" },
+  { path: "/api/newsletter/confirm", method: "GET", label: "Newsletter confirm API" },
+  { path: "/api/newsletter/unsubscribe", method: "GET", label: "Newsletter unsubscribe API" },
+  { path: "/api/admin/control-room/summary", method: "GET", label: "Control room summary (no session)" },
+] as const;
+
+/** @deprecated Use BROWSER_PROBE_ROUTES */
+export const ADMIN_GET_PROBE_ROUTES = BROWSER_PROBE_ROUTES;
