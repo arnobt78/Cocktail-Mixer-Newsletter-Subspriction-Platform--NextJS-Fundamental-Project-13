@@ -75,18 +75,21 @@ export function AdminOverviewDashboard({
       value: summary.allDrafts.length,
       icon: FileStack,
       accent: "text-violet-200",
+      guide: "Ready-to-send drafts currently stored in composer.",
     },
     {
       label: "Resend history",
       value: summary.allHistory.length,
       icon: History,
       accent: "text-cyan-200",
+      guide: "Campaigns sent so far and available for resend.",
     },
     {
       label: "Scheduled queue",
       value: summary.allQueue.length,
       icon: CalendarClock,
       accent: "text-amber-200",
+      guide: "Scheduled posts waiting for process queue run.",
     },
   ];
 
@@ -153,6 +156,9 @@ export function AdminOverviewDashboard({
                 <Icon className={`h-4 w-4 ${item.accent}`} />
               </div>
               <p className="text-3xl font-bold">{item.value}</p>
+              <p className="mt-2 text-xs leading-snug text-slate-400">
+                {item.guide}
+              </p>
             </Card>
           );
         })}

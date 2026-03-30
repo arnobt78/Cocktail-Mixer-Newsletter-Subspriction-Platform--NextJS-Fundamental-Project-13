@@ -31,10 +31,12 @@ function StatCardSkeleton({
   label,
   Icon,
   accent,
+  guide,
 }: {
   label: string;
   Icon: ComponentType<{ className?: string }>;
   accent: string;
+  guide?: string;
 }) {
   return (
     <Card className="glass-panel border-white/15 bg-white/[0.03] p-5 text-white">
@@ -43,6 +45,11 @@ function StatCardSkeleton({
         <Icon className={cn("h-4 w-4", accent)} />
       </div>
       <Pulse className="h-9 w-16" />
+      {guide ? (
+        <p className="mt-2 text-xs leading-snug text-slate-400">
+          {guide}
+        </p>
+      ) : null}
     </Card>
   );
 }
@@ -76,9 +83,24 @@ export function AdminOverviewPageSkeleton() {
             ).
           </p>
         </Card>
-        <StatCardSkeleton label="Saved drafts" Icon={FileStack} accent="text-violet-200" />
-        <StatCardSkeleton label="Resend history" Icon={History} accent="text-cyan-200" />
-        <StatCardSkeleton label="Scheduled queue" Icon={CalendarClock} accent="text-amber-200" />
+        <StatCardSkeleton
+          label="Saved drafts"
+          Icon={FileStack}
+          accent="text-violet-200"
+          guide="Ready-to-send drafts currently stored in composer."
+        />
+        <StatCardSkeleton
+          label="Resend history"
+          Icon={History}
+          accent="text-cyan-200"
+          guide="Campaigns sent so far and available for resend."
+        />
+        <StatCardSkeleton
+          label="Scheduled queue"
+          Icon={CalendarClock}
+          accent="text-amber-200"
+          guide="Scheduled posts waiting for process queue run."
+        />
       </div>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">

@@ -12,7 +12,7 @@ import {
   type FormEvent,
   type KeyboardEvent,
 } from "react";
-import { X } from "lucide-react";
+import { Check, Copy, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { RippleButton } from "@/components/ui/ripple-button";
@@ -35,6 +35,7 @@ export function AdminAccessDialog() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [shakeCount, setShakeCount] = useState(0);
+  const [copied, setCopied] = useState(false);
   const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
   const lastAutoSubmittedRef = useRef("");
 
@@ -144,6 +145,16 @@ export function AdminAccessDialog() {
     router.push("/");
   }
 
+  async function onCopyPasskey() {
+    try {
+      await navigator.clipboard.writeText("112233");
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1200);
+    } catch {
+      setError("Could not copy passkey. Please type 112233 manually.");
+    }
+  }
+
   return (
     <section className="fixed inset-0 z-[69] flex items-center justify-center px-4 py-10 sm:px-8">
       <AlertDialog open>
@@ -161,7 +172,26 @@ export function AdminAccessDialog() {
             <div>
               <AlertDialogTitle>Admin Access Verification</AlertDialogTitle>
               <AlertDialogDescription>
-                To access the admin page, please enter the passkey.
+                To access the admin page, please enter the passkey{" "}
+                <span className="font-semibold text-amber-300">112233</span>.
+                <button
+                  type="button"
+                  onClick={onCopyPasskey}
+                  className="ml-2 inline-flex items-center gap-1 rounded-md border border-amber-300/35 bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-200 transition hover:bg-amber-500/20"
+                  aria-label="Copy admin passkey"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-3.5 w-3.5" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-3.5 w-3.5" />
+                      Copy
+                    </>
+                  )}
+                </button>
               </AlertDialogDescription>
             </div>
             <button
