@@ -14,7 +14,16 @@ A full-stack, educational cocktail discovery app built with the **Next.js App Ro
 
 - **Live Demo:** [https://cocktails-newsletter.vercel.app](https://cocktails-newsletter.vercel.app)
 
----
+![Image 1](https://github.com/user-attachments/assets/d72d64bb-29a2-4f0c-b415-5e8e1d438bc6)
+![Image 2](https://github.com/user-attachments/assets/3977a7c1-20ce-4baa-86c3-322b82fad9e4)
+![Image 3](https://github.com/user-attachments/assets/375a894e-1886-483f-8981-6b768ec95626)
+![Image 4](https://github.com/user-attachments/assets/d2bfcbb3-f90b-4d4c-a739-ba35720e0013)
+![Image 5](https://github.com/user-attachments/assets/5595b55d-6d06-47de-bb6e-bdbe1a906555)
+![Image 6](https://github.com/user-attachments/assets/7a972221-8386-4cbd-907e-674cf433893a)
+![Image 7](https://github.com/user-attachments/assets/c5009a0c-e45a-455d-989c-96af14b6ce17)
+![Image 8](https://github.com/user-attachments/assets/886e2e75-cf89-4753-9720-695518bf31da)
+![Image 9](https://github.com/user-attachments/assets/7308e76f-d69c-43c5-8869-ad6b857ddefd)
+![Image 10](https://github.com/user-attachments/assets/f0d92887-489a-4c79-9113-1b616595136a)
 
 ## Table of Contents
 
