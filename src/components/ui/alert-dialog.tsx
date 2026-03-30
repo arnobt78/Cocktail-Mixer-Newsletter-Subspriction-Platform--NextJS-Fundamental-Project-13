@@ -74,7 +74,10 @@ export function AlertDialogDescription({
   children: ReactNode;
   className?: string;
 }) {
+  /** `div` (not `p`) so children may include buttons without invalid HTML / hydration bugs. */
   return (
-    <p className={cn("mt-1 text-sm leading-relaxed text-slate-300", className)}>{children}</p>
+    <div className={cn("mt-1 text-sm leading-relaxed text-slate-300", className)}>
+      {children}
+    </div>
   );
 }

@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BROWSER_PROBE_ROUTES } from "@/data/project-api-registry";
 import { cn } from "@/lib/utils";
+import { formatAdminDateTime } from "@/lib/admin-datetime";
 
 type ProbeRow = {
   id: string;
@@ -208,7 +209,7 @@ export function AdminApiStatusPage() {
           {diagnostics ? (
             <p className="mt-2 text-xs text-slate-500">
               Host {diagnostics.runtime.cocktailDbHost} · server time{" "}
-              {new Date(diagnostics.generatedAt).toLocaleString()}
+              {formatAdminDateTime(diagnostics.generatedAt)}
             </p>
           ) : null}
         </Card>
@@ -219,7 +220,7 @@ export function AdminApiStatusPage() {
           </h2>
           <p className="mt-2 text-sm text-slate-400">
             {checkedAt
-              ? `Last run ${new Date(checkedAt).toLocaleString()} · auto every 30s`
+              ? `Last run ${formatAdminDateTime(checkedAt)} · auto every 30s`
               : "Running first check…"}
           </p>
           <p className="mt-2 text-xs text-slate-500">
